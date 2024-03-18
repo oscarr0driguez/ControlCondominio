@@ -29,35 +29,39 @@ namespace ControlCondominio
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnLimpiarPropietario = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtDpi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxNoCasa = new System.Windows.Forms.TextBox();
+            this.textBoxCuota = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.comboBoxDpiDueño = new System.Windows.Forms.ComboBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.Registrar_Propietarios = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Reistro_Propiedades = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // BtnLimpiarPropietario
             // 
-            this.button1.Location = new System.Drawing.Point(154, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Limpiar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnLimpiarPropietario.Location = new System.Drawing.Point(154, 310);
+            this.BtnLimpiarPropietario.Name = "BtnLimpiarPropietario";
+            this.BtnLimpiarPropietario.Size = new System.Drawing.Size(94, 23);
+            this.BtnLimpiarPropietario.TabIndex = 0;
+            this.BtnLimpiarPropietario.Text = "Limpiar";
+            this.BtnLimpiarPropietario.UseVisualStyleBackColor = true;
+            this.BtnLimpiarPropietario.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -69,12 +73,12 @@ namespace ControlCondominio
             this.label1.TabIndex = 1;
             this.label1.Text = "PROPIETARIOS";
             // 
-            // textBox1
+            // TxtDpi
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 2;
+            this.TxtDpi.Location = new System.Drawing.Point(97, 57);
+            this.TxtDpi.Name = "TxtDpi";
+            this.TxtDpi.Size = new System.Drawing.Size(132, 20);
+            this.TxtDpi.TabIndex = 2;
             // 
             // label2
             // 
@@ -106,12 +110,12 @@ namespace ControlCondominio
             this.label4.TabIndex = 5;
             this.label4.Text = "Apellido:";
             // 
-            // textBox3
+            // TxtApellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 20);
-            this.textBox3.TabIndex = 7;
+            this.TxtApellido.Location = new System.Drawing.Point(97, 106);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(132, 20);
+            this.TxtApellido.TabIndex = 7;
             // 
             // label5
             // 
@@ -133,19 +137,19 @@ namespace ControlCondominio
             this.label6.TabIndex = 9;
             this.label6.Text = "PROPIEDADES";
             // 
-            // textBox4
+            // textBoxNoCasa
             // 
-            this.textBox4.Location = new System.Drawing.Point(116, 216);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 20);
-            this.textBox4.TabIndex = 10;
+            this.textBoxNoCasa.Location = new System.Drawing.Point(116, 216);
+            this.textBoxNoCasa.Name = "textBoxNoCasa";
+            this.textBoxNoCasa.Size = new System.Drawing.Size(132, 20);
+            this.textBoxNoCasa.TabIndex = 10;
             // 
-            // textBox6
+            // textBoxCuota
             // 
-            this.textBox6.Location = new System.Drawing.Point(116, 269);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 20);
-            this.textBox6.TabIndex = 12;
+            this.textBoxCuota.Location = new System.Drawing.Point(116, 269);
+            this.textBoxCuota.Name = "textBoxCuota";
+            this.textBoxCuota.Size = new System.Drawing.Size(132, 20);
+            this.textBoxCuota.TabIndex = 12;
             // 
             // label7
             // 
@@ -153,9 +157,9 @@ namespace ControlCondominio
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(23, 272);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 13;
-            this.label7.Text = "No. De Casa:";
+            this.label7.Text = "Mantenimiento:";
             // 
             // label8
             // 
@@ -167,33 +171,25 @@ namespace ControlCondominio
             this.label8.TabIndex = 14;
             this.label8.Text = "DPI del Pripietario:";
             // 
-            // comboBox1
+            // comboBoxDpiDueño
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(116, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 21);
-            this.comboBox1.TabIndex = 15;
+            this.comboBoxDpiDueño.FormattingEnabled = true;
+            this.comboBoxDpiDueño.Location = new System.Drawing.Point(116, 242);
+            this.comboBoxDpiDueño.Name = "comboBoxDpiDueño";
+            this.comboBoxDpiDueño.Size = new System.Drawing.Size(132, 21);
+            this.comboBoxDpiDueño.TabIndex = 15;
+            this.comboBoxDpiDueño.SelectedIndexChanged += new System.EventHandler(this.comboBoxDpiDueño_SelectedIndexChanged);
             // 
-            // textBox2
+            // TxtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 20);
-            this.textBox2.TabIndex = 6;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(154, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Limpiar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.TxtNombre.Location = new System.Drawing.Point(97, 83);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(132, 20);
+            this.TxtNombre.TabIndex = 6;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(173, 355);
+            this.button3.Location = new System.Drawing.Point(2, 339);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 18;
@@ -203,7 +199,7 @@ namespace ControlCondominio
             // 
             // Registrar_Propietarios
             // 
-            this.Registrar_Propietarios.Location = new System.Drawing.Point(26, 150);
+            this.Registrar_Propietarios.Location = new System.Drawing.Point(97, 150);
             this.Registrar_Propietarios.Name = "Registrar_Propietarios";
             this.Registrar_Propietarios.Size = new System.Drawing.Size(106, 23);
             this.Registrar_Propietarios.TabIndex = 19;
@@ -211,43 +207,65 @@ namespace ControlCondominio
             this.Registrar_Propietarios.UseVisualStyleBackColor = true;
             this.Registrar_Propietarios.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // Reistro_Propiedades
             // 
-            this.button5.Location = new System.Drawing.Point(26, 310);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 23);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "Registrar Propietario";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Reistro_Propiedades.Location = new System.Drawing.Point(2, 310);
+            this.Reistro_Propiedades.Name = "Reistro_Propiedades";
+            this.Reistro_Propiedades.Size = new System.Drawing.Size(146, 23);
+            this.Reistro_Propiedades.TabIndex = 20;
+            this.Reistro_Propiedades.Text = "Registrar Propietario";
+            this.Reistro_Propiedades.UseVisualStyleBackColor = true;
+            this.Reistro_Propiedades.Click += new System.EventHandler(this.Reistro_Propietrarios_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(261, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(430, 150);
+            this.dataGridView1.TabIndex = 21;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(261, 191);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(430, 150);
+            this.dataGridView2.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(716, 390);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Reistro_Propiedades);
             this.Controls.Add(this.Registrar_Propietarios);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxDpiDueño);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxCuota);
+            this.Controls.Add(this.textBoxNoCasa);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtApellido);
+            this.Controls.Add(this.TxtNombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TxtDpi);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnLimpiarPropietario);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,25 +273,26 @@ namespace ControlCondominio
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnLimpiarPropietario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtDpi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxNoCasa;
+        private System.Windows.Forms.TextBox textBoxCuota;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxDpiDueño;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Registrar_Propietarios;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Reistro_Propiedades;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
